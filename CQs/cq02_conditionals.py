@@ -1,10 +1,12 @@
-"""This is CQ02 """
+"""This is CQ02!"""
 
 __author__ = "730672220"
 
 
 def guess_a_number() -> None:
     secret: int = 7
+    # how to add a local variable inside the function  -> local variable: type = value
+    # Logic (if, else etc) should go inside function
     x = int(input("Guess a number:"))
     print("Your guess was " + str(x))
     if x == secret:
@@ -17,4 +19,5 @@ def guess_a_number() -> None:
 
 
 if __name__ == "__main__":
+    # Means that you're running the file in question, not referencing other files
     guess_a_number()
