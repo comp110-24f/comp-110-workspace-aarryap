@@ -9,7 +9,7 @@ def main_planner(guests: int) -> None:
     print("Tea Bags: " + str(tea_bags(people=guests)))
     print("Treats: " + str(treats(people=guests)))
     print("Cost: $" + str(cost(tea_bags(people=guests), treats(people=guests))))
-    # Got stuck here trying different things inside of the cost function like (tea_count=tea_bags, treat_count=treats) until I relaized since tea_count is never defined, I cannot call that function, I just need to put the values I want for (tea_count, treat_count) in the parentheses
+    # Got stuck here trying different things inside of the cost function like (tea_count=tea_bags, treat_count=treats) until I relaized since tea_count is never defined, I cannot call that function, I just need to put the values I want for (tea_count, treat_count) in the parentheses.
     return None
 
 
@@ -20,8 +20,8 @@ def tea_bags(people: int) -> int:
 
 def treats(people: int) -> int:
     """This is a function which attributes 1.5 treats for each cup of tea a guest drinks."""
-    treats = tea_bags = people * 2
-    return int(tea_bags * 1.5)
+    return int(tea_bags(people=people) * 1.5)
+    # Got stuck here because I was using treats = (variable assignment operator). Basically, there is an easier way to do it and I don't need to put tea_bags(people*2) because I am already calling the function.
 
 
 def cost(tea_count: int, treat_count: int) -> float:
