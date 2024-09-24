@@ -29,7 +29,9 @@ def input_letter() -> str:
 def contains_char(word: str, letter: str) -> None:
     count: int = 0  # this counts instances
     print("Searching for " + letter + " in " + word)
-    # was using indices as if it was a loop but it's not. need to manually check each index.
+    # parameters don't need def, keep contain_char parameters different to input funcs
+    # was using indices as if loop but it's not
+    # must manually check each index
     if word[0] == letter:
         print(letter + " found at index 0")
         count = count + 1
@@ -49,6 +51,7 @@ def contains_char(word: str, letter: str) -> None:
         print(str(count) + " instances of " + letter + " found in " + word)
     if count == 1:
         print(str(count) + " instance of " + letter + " found in " + word)
+    # by adding these statements I can make sure it's gramatically correct
     if count == 0:
         print(str(count) + "No instances of " + letter + " found in " + word)
 
@@ -57,5 +60,7 @@ def main() -> None:
     contains_char(word=input_word(), letter=input_letter())
 
 
+# automatically handles function calls
 if __name__ == "__main__":
     main()
+# lets me run file as module and allows other modules to import function
