@@ -4,10 +4,9 @@ __author__ = "730672220"
 
 
 def input_guess(secret_word_len: int) -> str:
+    """asks a user for input."""
     input_guess: str = input(f"Enter a {secret_word_len}-character word: ")
-    while (
-        len(input_guess) != secret_word_len
-    ):  # while statement gets skipped over if false and just returns
+    while len(input_guess) != secret_word_len:
         if len(input_guess) != secret_word_len:
             input_guess = input(f"That wasn't {secret_word_len} chars! Try again: ")
     return input_guess
