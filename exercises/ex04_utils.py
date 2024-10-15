@@ -4,9 +4,8 @@ __author__ = "730672220"
 
 
 def all(list_of_numbers: list[int], specific_number: int) -> bool:
-    if (
-        list_of_numbers == []
-    ):  # start with empty list situation so it will return immediately
+    if list_of_numbers == []:
+        # start with empty list situation so it will return immediately
         return False
     index: int = 0
     while index < len(list_of_numbers):
@@ -33,11 +32,14 @@ def max(input: list[int]) -> int:
 
 
 def is_equal(list_1: list[int], list_2: list[int]) -> bool:
+    if list_1 == [] or list_2 == []:
+        return True
     index: int = 0
     while index < len(list_1) and index < len(list_2):
-        # need to include second "index <" in order to work
         if list_1[index] != list_2[index]:
             return False
+        if list_1[index] == [] or list_2[index] == []:
+            return True
         index += 1
     return True
 
