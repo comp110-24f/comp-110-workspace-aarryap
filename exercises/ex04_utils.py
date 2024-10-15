@@ -39,6 +39,7 @@ def is_equal(list_1: list[int], list_2: list[int]) -> bool:
         if list_1[index] != list_2[index]:
             return False
         if list_1[index] == [] or list_2[index] == []:
+            # keep other possible outcomes under while loop
             return True
         index += 1
     return True
