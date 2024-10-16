@@ -32,15 +32,13 @@ def max(input: list[int]) -> int:
 
 
 def is_equal(list_1: list[int], list_2: list[int]) -> bool:
-    if list_1 == [] or list_2 == []:
-        return True
+    if len(list_1) != len(list_2):
+        return False
     index: int = 0
     while index < len(list_1) and index < len(list_2):
+        # need to include second "index <" in order to work
         if list_1[index] != list_2[index]:
             return False
-        if list_1[index] == [] or list_2[index] == []:
-            # keep other possible outcomes under while loop
-            return True
         index += 1
     return True
 
