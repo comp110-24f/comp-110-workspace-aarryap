@@ -18,6 +18,12 @@ def test_only_evens_use_case_2() -> None:
     assert a == [102, 45, 76]
 
 
+def test_only_evens_use_case_3() -> None:
+    """Testing that only_evens function returns only evens even if duplicates, in a typical input."""
+    a: list[int] = [102, 102, 102]
+    assert only_evens(a) == [102, 102, 102]
+
+
 def test_only_evens_edge_case() -> None:
     """Testing only_evens on all odds list."""
     assert only_evens([3, 5, 7]) == []
