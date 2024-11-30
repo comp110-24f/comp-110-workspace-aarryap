@@ -16,3 +16,10 @@ def fun2(number: str, number2: str) -> str:
 print(fun(1, 2))
 print(fun2(str(1), str(2)))
 print(fun2("3", "4"))
+
+
+x: list[float] = [1.0, 2.0]
+y: list[float] = [3.0, 4.0]
+y = x
+x[0] = 3.0
+print(y)

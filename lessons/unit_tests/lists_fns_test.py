@@ -5,7 +5,7 @@ from lessons.unit_tests.list_fns import get_first, get_and_remove_first, remove_
 
 def test_get_first_use_case() -> None:
     """testing get_first function returns the first element in a typical input."""
-    a: list[str] = [4, 5, 6, 7]
+    a: list[int] = [4, 5, 6, 7]
     assert get_first(a) == 4
 
 
@@ -15,8 +15,8 @@ def test_get_first_edge_case() -> None:
 
 
 def test_remove_first_use_case() -> None:
-    """Testing remove_first reutrns nothing."""
-    a: list[str] = [4, 5, 6, 7]
+    """Testing remove_first returns nothing."""
+    a: list[int] = [4, 5, 6, 7]
     remove_first(a)
     assert a == [5, 6, 7]
 
